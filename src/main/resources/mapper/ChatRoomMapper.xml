@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.ChatRoomMapper">
+    <insert id="createRoom" parameterType="String">
+        <selectKey keyColumn="rid" keyProperty="rid" resultType="int" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into chatroom(rname,description) values (#{rname},#{description})
+    </insert>
+    <delete id="deleteRoom" parameterType="Integer">
+        delete from chatroom where rid = #{rid}
+    </delete>
+
+    <select id="getAllRoom" resultType="ChatRoom" parameterType="Integer">
+        select * from chatroom
+        LIMIT #{page},#{size};
+    </select>
+
+    <select id="getBySearch" resultType="ChatRoom">
+        select * from chatroom
+        where rid like #{key}
+        or rname like #{key}
+        or description like #{key}
+        LIMIT #{page},#{size};
+    </select>
+</mapper>
