@@ -1,4 +1,4 @@
-# 创建飞花令节点
+# 创建飞花令节点-已建立
 
 import pandas as pd
 import numpy as np
@@ -64,7 +64,7 @@ def updateNode(m_graph,m_label1,m_attrs1,new_attrs):
 graph = Graph("http://localhost:7474", auth=("neo4j", "YJL321432yjl"))
 
 def create_word():
-    file = './data3/word.xlsx'
+    file = '../data3/word.xlsx'
     data = pd.read_excel(file).fillna("无")
     word=list(data.word)
     word_label="word"

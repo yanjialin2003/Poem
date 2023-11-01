@@ -1,3 +1,5 @@
+# 诗句实体建立-已建立
+
 import pandas as pd
 import numpy as np
 import re
@@ -74,7 +76,7 @@ def get_filename(path,filetype):  # 输入路径、文件类型例如'.xlsx'
 
 
 def create_sentence():
-    file = 'sentences/'
+    file = '../sentences/'
     lists = get_filename(file, '.xlsx')
     for it in lists:
         newfile = file + it

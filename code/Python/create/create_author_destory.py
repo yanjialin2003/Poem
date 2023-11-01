@@ -1,4 +1,4 @@
-# 诗人好友关系建立-已建立
+# 诗人与朝代实体建立-已建立
 
 import pandas as pd
 import numpy as np
@@ -7,7 +7,6 @@ from py2neo import Node,Relationship,Graph,NodeMatcher,RelationshipMatcher
 
 # 创建节点
 def CreateNode(m_graph,m_label,m_attrs):
-    #根绝节点name属性，查找节点
     m_n="_.name="+"\'"+m_attrs['name']+"\'"
     matcher = NodeMatcher(m_graph)
     re_value = matcher.match(m_label).where(m_n).first()
@@ -65,37 +64,39 @@ def updateNode(m_graph,m_label1,m_attrs1,new_attrs):
 graph = Graph("http://localhost:7474", auth=("neo4j", "YJL321432yjl"))
 
 
-def create_friend():
-    # file = '../data2/friend/tang/friend2.xlsx'
-    # file = '../data2/friend/song/friend2.xlsx'
-    # file = '../data2/friend/yuan/friend2.xlsx'
-    # file = '../data2/friend/ming/friend2.xlsx'
-    file = '../data2/friend/qing/friend2.xlsx'
-
-    # 获取诗词内容
-    data = pd.read_excel(file).fillna("无")
-
+def create_author():
+    file='../data2/author.xlsx'
+    data=pd.read_excel(file).fillna("无")
     author=list(data.author)
-    friend=list(data.friend)
-
-
+    produce=list(data.produce)
+    num=list(data.num)
+    src=list(data.src)
+    desty=list(data.desty)
+    bg_time=list(data.begin_time)
+    ed_time=list(data.end_time)
+    zi_list=list(data.zi)
+    hao_list=list(data.hao)
     author_label='author'
-
+    desty_label='desty'
     for i in range(len(author)):
-        print("第" + str(i) + "个")
-        attr1 = {"name": author[i]}
-        if MatchNode(graph, author_label, attr1) != None:
-            friend_list=friend[i].split(',')
-            for it in friend_list:
-                attr2 = {"name": it}
-                if MatchNode(graph, author_label, attr2) != None and it!=author[i]:
-                    # 创建关系
-                    m_r_name1 = "好友"
-                    reValue1 = CreateRelationship(graph, author_label, attr1, author_label, attr2, m_r_name1)
-                    print("创建关系：" + author[i] + "-好友-" + it + "成功")
-                    m_r_name2 = "好友"
-                    reValue2 = CreateRelationship(graph, author_label, attr2, author_label, attr1, m_r_name2)
-                    print("创建关系：" + it + "-好友-" + author[i] + "成功")
+        print("第"+str(i)+"个")
+        attr1 = {"name": author[i], "produce": produce[i], "num": num[i],
+                 "src": src[i],"bg_time":bg_time[i],"ed_time":ed_time[i],"zi":zi_list[i],"hao":hao_list[i]}
+        CreateNode(graph, author_label, attr1)
+        print("创建诗人：" + author[i] + "成功！！")
+        attr2={"name":desty[i]}
+        if MatchNode(graph,desty_label,attr2)==None:
+            CreateNode(graph,desty_label,attr2)
+            print("创建朝代："+desty[i]+"成功！！")
+        #创建关系
+        m_r_name1 = "朝代"
+        reValue1 = CreateRelationship(graph, author_label, attr1, desty_label, attr2, m_r_name1)
+        print("创建关系："+author[i]+"-所属朝代-"+desty[i]+"成功")
+        m_r_name2 = "包含"
+        reValue2 = CreateRelationship(graph,desty_label, attr2, author_label, attr1,  m_r_name2)
+        print("创建关系：" + desty[i] + "-包含-" + author[i] + "成功")
+
+
 
 if __name__ == '__main__':
-    create_friend()
+    create_author()

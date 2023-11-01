@@ -1,3 +1,5 @@
+# 类别实体的建立-已建立
+
 import pandas as pd
 import numpy as np
 import re
@@ -61,7 +63,7 @@ def updateNode(m_graph,m_label1,m_attrs1,new_attrs):
 graph = Graph("http://localhost:7474", auth=("neo4j", "YJL321432yjl"))
 
 def create_tag():
-    file = 'data5/tag_name.xlsx'
+    file = '../data5/tag_name.xlsx'
     data = pd.read_excel(file).fillna("无")
     tag=list(data.tag)
     tag_label="tag"
