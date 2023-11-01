@@ -1,4 +1,4 @@
-# 获取作者信息-唐宋元明清-TODO 待改造
+# 获取作者信息-唐宋元明清-OK-处理完成
 
 import requests
 from bs4 import BeautifulSoup
@@ -8,12 +8,12 @@ import re
 headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'}#创建头部信息
 pom_list=[]
 k=1
-for i in range(1,2):
-    url='https://www.xungushici.com/authors/cd-tang-p-'+str(i)
-    # url = 'https://www.xungushici.com/authors/cd-song-p-' + str(i)
+for i in range(1,51):
+    # url='https://www.xungushici.com/authors/cd-tang-p-'+str(i) # 246+1页，一页10个
+    # url = 'https://www.xungushici.com/authors/cd-song-p-' + str(i) # 759+1页，一页10个
     # url = 'https://www.xungushici.com/authors/cd-yuan-p-' + str(i)
     # url = 'https://www.xungushici.com/authors/cd-ming-p-' + str(i)
-    # url = 'https://www.xungushici.com/authors/cd-qing-p-' + str(i)
+    url = 'https://www.xungushici.com/authors/cd-qing-p-' + str(i)
     r=requests.get(url,headers=headers)
     content=r.content.decode('utf-8')
     soup = BeautifulSoup(content, 'html.parser')
@@ -98,4 +98,8 @@ for i in range(0,len(pom_list)):
     sheet1.write(i+1, 3, pom_list[i]['experience'])
     sheet1.write(i + 1, 4, pom_list[i]['src'])
     sheet1.write(i + 1, 5, pom_list[i]['desty'])
-xl.save("../data2/author.xlsx")
+# xl.save("../data2/tang_author.xlsx")
+# xl.save("../data2/song_author.xlsx")
+# xl.save("../data2/yuan_author.xlsx")
+# xl.save("../data2/ming_author.xlsx")
+xl.save("../data2/qing_author.xlsx")

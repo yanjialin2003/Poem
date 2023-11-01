@@ -1,4 +1,4 @@
-#根据诗人的个人简介抽取：生于，死于，字，号-OK
+#根据诗人的个人简介抽取：生于，死于，字，号-OK-处理完成
 
 import pandas as pd
 import re
@@ -6,7 +6,11 @@ from xlrd import open_workbook
 from xlutils.copy import copy
 
 def read_author():
-    file= "../data2/author.xlsx"
+    # file= "../data2/tang_author.xlsx"
+    # file= "../data2/song_author.xlsx"
+    # file= "../data2/yuan_author.xlsx"
+    # file= "../data2/ming_author.xlsx"
+    file= "../data2/qing_author.xlsx"
     data=pd.read_excel(file).fillna("无")
     produce=list(data.produce)
     i=1

@@ -95,7 +95,10 @@ for j in range(5, 7):
                 for it in background:
                     text_back=text_back+it+"\n"
             #2.9标签
-
+            tag = ""
+            if len(selector.xpath('/html/body/div[1]/div/div[1]/div[1]/div/div[2]//a')) != 0:
+                tag = selector.xpath('/html/body/div[1]/div/div[1]/div[1]/div/div[2]//a/text()')
+                tag = ",".join(tag)
             content['title']=xtitle
             content['desty']=desty
             content['author']=author
@@ -120,6 +123,7 @@ for j in range(5, 7):
     sheet1.write(0,4,'trans_content')
     sheet1.write(0,5,'appear')
     sheet1.write(0,6,'background')
+    sheet1.write(0,7,'tag')
 
     for i in range(0,len(pom_list)):
         sheet1.write(i+1,0,pom_list[i]['title'])
@@ -129,6 +133,7 @@ for j in range(5, 7):
         sheet1.write(i+1, 4, pom_list[i]['trans_content'])
         sheet1.write(i+1, 5, pom_list[i]['appear'])
         sheet1.write(i+1, 6, pom_list[i]['background'])
+        sheet1.write(i+1, 7, pom_list[i]['tag'])
     # tang1(1990首) tang2(1990) tang3(3980) tang4()
     # xl.save("../data/tang4.xlsx")
 
