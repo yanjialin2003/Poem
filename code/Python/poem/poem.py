@@ -1,4 +1,4 @@
-# 获取诗词-唐宋元明清-TODO 待验证，但暂时不需要
+# 获取诗词-唐宋元明清-TODO 重新爬取，添加tag 暂时不爬
 
 import requests
 from bs4 import BeautifulSoup
@@ -22,7 +22,6 @@ k=1
 
 # 清91540首 - (1,47) - (1,5)
 for j in range(5, 7):
-
     pages = j*200 - 199
     for i in range(pages,pages+199):
         # url='https://www.xungushici.com/shicis/cd-tang-p-'+str(i)
@@ -106,6 +105,7 @@ for j in range(5, 7):
             content['trans_content']=trans
             content['appear']=appear
             content['background']=text_back
+            content['tag']=tag
             pom_list.append(content)
             print("第"+str(k)+"个")
             k=k+1
