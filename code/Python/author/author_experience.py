@@ -1,4 +1,4 @@
-# 诗人经历(标签版，方便显示)-TODO 待改造
+# 诗人经历(标签版，方便显示)-处理完成
 
 import requests
 from bs4 import BeautifulSoup
@@ -9,12 +9,12 @@ headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 pom_list=[]
 k=1
 #2010
-for i in range(1,2):
-    url='https://www.xungushici.com/authors/cd-tang-p-'+str(i)
+for i in range(1,51):
+    # url='https://www.xungushici.com/authors/cd-tang-p-'+str(i)
     # url = 'https://www.xungushici.com/authors/cd-song-p-' + str(i)
     # url = 'https://www.xungushici.com/authors/cd-yuan-p-' + str(i)
     # url = 'https://www.xungushici.com/authors/cd-ming-p-' + str(i)
-    # url = 'https://www.xungushici.com/authors/cd-qing-p-' + str(i)
+    url = 'https://www.xungushici.com/authors/cd-qing-p-' + str(i)
     r=requests.get(url,headers=headers)
     content=r.content.decode('utf-8')
     soup = BeautifulSoup(content, 'html.parser')
@@ -77,4 +77,8 @@ sheet1.write(0,3,'experience')
 for i in range(0,len(pom_list)):
     sheet1.write(i+1,0,pom_list[i]['author'])
     sheet1.write(i+1, 3, pom_list[i]['experience'])
-xl.save("../data2/author_new.xlsx")
+# xl.save("../data2/tang_author_new.xlsx")
+# xl.save("../data2/song_author_new.xlsx")
+# xl.save("../data2/yuan_author_new.xlsx")
+# xl.save("../data2/ming_author_new.xlsx")
+xl.save("../data2/qing_author_new.xlsx")

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/myActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.My.MyFragment">
+
+    <!--        顶部导航-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/xui_config_color_titlebar"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="我 的"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_setting" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/menu_line"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        >
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            style="@style/InfoItem.Account"
+            android:layout_height="60dp"
+            app:sLeftTextString="头像">
+
+            <com.xuexiang.xui.widget.imageview.RadiusImageView
+                android:id="@+id/riv_head_pic"
+                style="@style/RadiusImageView.Circle"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/sRightImgId"
+                app:srcCompat="@drawable/ic_default_head" />
+
+        </com.xuexiang.xui.widget.textview.supertextview.SuperTextView>
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="账号" />
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="通知" />
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            style="@style/InfoItem.Account"
+            app:sDividerLineType="none"
+            app:sLeftTextString="收藏" />
+
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_advice"
+            style="@style/InfoItem.Account"
+            android:layout_marginTop="20dp"
+            app:sDividerLineType="none"
+            app:sLeftTextString="意见反馈" />
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_settings"
+            style="@style/InfoItem.Account"
+            android:layout_marginTop="20dp"
+            app:sLeftTextString="设置" />
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_about"
+            style="@style/InfoItem.Account"
+            app:sDividerLineType="none"
+            app:sLeftTextString="关于" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

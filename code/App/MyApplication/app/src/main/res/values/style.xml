@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextStyle.Content.Match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+<!--    登录-->
+    <style name="SuperButton.Primary.Login">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:layout_marginEnd">50dp</item>
+        <item name="sCornersRadius">20dp</item>
+        <item name="sSelectorNormalColor">?attr/colorAccent</item>
+        <item name="sSelectorPressedColor">?attr/colorAccent</item>
+        <item name="android:textColor">@color/xui_config_color_white</item>
+    </style>
+
+<!--    个人中心-->
+    <style name="Container">
+        <item name="android:paddingStart">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingEnd">?attr/xui_config_content_spacing_horizontal</item>
+    </style>
+
+    <style name="InfoItem" parent="Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sLeftViewMarginLeft">10dp</item>
+        <item name="sRightViewMarginRight">0dp</item>
+        <item name="sRightIconMarginRight">0dp</item>
+        <item name="sLeftIconMarginLeft">0dp</item>
+        <item name="sLeftTextSize">?attr/xui_config_size_content_text</item>
+        <item name="sLeftTextColor">@color/xui_config_color_title_text</item>
+        <item name="sCenterTextColor">@color/xui_config_color_black</item>
+        <item name="sRightTextColor">@color/xui_config_color_explain_text</item>
+        <item name="sRightTextSize">?attr/xui_config_size_content_text</item>
+    </style>
+
+    <style name="InfoItem.Account">
+        <item name="sLeftViewWidth">110dp</item>
+        <item name="sLeftViewGravity">left_center</item>
+        <item name="sCenterViewGravity">left_center</item>
+        <item name="sCenterViewMarginLeft">25dp</item>
+        <item name="sRightTextSize">?attr/xui_config_size_content_text</item>
+        <item name="sRightViewMarginRight">10dp</item>
+        <item name="sRightIconRes">@drawable/icon_arrow_right_grey</item>
+    </style>
+
+    <style name="RadiusImageView.Circle">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="riv_is_circle">true</item>
+        <item name="riv_border_width">0dp</item>
+    </style>
+</resources>

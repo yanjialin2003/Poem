@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AdviceActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/poetryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"/>
+
+    <com.xuexiang.xui.widget.edittext.MultiLineEditText
+        android:id="@+id/advice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:mlet_maxCount="500"
+        tools:ignore="MissingConstraints" />
+
+    <com.xuexiang.xui.widget.button.ButtonView
+        android:id="@+id/advice_btn"
+        style="@style/ButtonView.Blue"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/advice" />
+
+</LinearLayout>

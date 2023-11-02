@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myapplication.Fragment.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_ai_poetry"
+        android:name="com.example.myapplication.Fragment.AiPoetry.AiPoetryFragment"
+        android:label="@string/title_ai_poetry"
+        tools:layout="@layout/fragment_ai_poetry" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_association"-->
+<!--        android:name="com.example.myapplication.Fragment.association.AssociationFragment"-->
+<!--        android:label="@string/title_association"-->
+<!--        tools:layout="@layout/fragment_association" />-->
+    <fragment
+        android:id="@+id/navigation_web"
+        android:name="com.example.myapplication.Fragment.WebFragment"
+        android:label="@string/title_web"
+        tools:layout="@layout/fragment_web" />
+
+    <fragment
+        android:id="@+id/navigation_my"
+        android:name="com.example.myapplication.Fragment.My.MyFragment"
+        android:label="@string/title_my"
+        tools:layout="@layout/fragment_my" />
+
+</navigation>

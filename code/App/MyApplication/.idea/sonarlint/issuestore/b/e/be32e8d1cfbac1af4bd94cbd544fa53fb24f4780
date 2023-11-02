@@ -1,0 +1,46 @@
+
+™	java:S1160"YRename this field "SearchRetrofit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÔãÕùÿÿÿÿJ$c1ade900-4db1-4f7c-93dc-dc086d36f314
+	java:S1161"^Rename this field "SearchByTagRetrofit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãšèËùÿÿÿÿJ$989b68a6-c141-4ac6-97f1-285cd4e48498
+	java:S1169"TRename this field "COMPLETED" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Ã»ÙJ$fad55e8f-68f2-4cbb-850a-c6b129dbc4b4
+•	java:S116:"URename this field "TO_WEBVIEW" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùüä­üÿÿÿÿJ$85b7b161-c074-4b72-8db9-09fbd555e278
+]
+java:S11709"!Make this final field static too.(÷Ã»ÙJ$1101f785-5612-42ff-ab09-f51844549ab2
+b
+java:S1170:"!Make this final field static too.(ùüä­üÿÿÿÿJ$41e0798f-519a-45dd-9b80-56730649d124
+£
+java:S14501"bRemove the "SearchByTagRetrofit" field and declare it as a local variable in the relevant methods.(ãšèËùÿÿÿÿJ$a678e480-cf2a-4868-9243-ccf9a7df071a
+
+java:S14500"]Remove the "SearchRetrofit" field and declare it as a local variable in the relevant methods.(ºÔãÕùÿÿÿÿJ$13db698d-1c4e-44b9-834b-979efb7d3477
+”
+java:S14507"XRemove the "titleText" field and declare it as a local variable in the relevant methods.(ŒÅ¨ÖJ$9904ee59-780e-4232-b9bb-2006b3da17bf
+’
+java:S14506"VRemove the "toolbar" field and declare it as a local variable in the relevant methods.(ş®º—J$0a607183-0fdb-4567-a120-d5d5541c3faf
+œ
+java:S14508"[Remove the "toolbarTitle" field and declare it as a local variable in the relevant methods.(”“¾¤üÿÿÿÿJ$9bb76496-534e-4d9d-be02-d94c80a928e3
+k
+java:S1874D"/Remove this use of "Handler"; it is deprecated.(ŸÇŸÇJ$4ddb58d4-a6fc-4410-9c8f-b56a52965b8e
+b	java:S131\""Add a default case to this switch.(øå´¡ÿÿÿÿÿJ$6b1aa8e7-6cc9-477a-8589-a5faaae4640d
+|	java:S125y"<This block of commented-out lines of code should be removed.(¾ğ¯üÿÿÿÿJ$a56e0750-a5c2-4b63-a44e-cc324ee1b372
+g
+java:S10686"+Remove this unused "toolbar" private field.(ş®º—J$2ca73a8c-843a-4a83-be58-49970de7f791
+k
+java:S1068@"*Remove this unused "isLoad" private field.(ÜœçÿüÿÿÿÿJ$d95a3de6-b453-4ed5-8299-a6ef1175780d
+s
+java:S1068A"2Remove this unused "responseObject" private field.(¾ ŸŠüÿÿÿÿJ$b3807727-5b14-45b5-919e-952538175d6d
+…
+java:S1192‰"HDefine a constant instead of duplicating this literal "collect" 4 times.(™Ô ½J$97d945e1-bb26-41b6-93c4-38fb9df30cae
+	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìŸ ĞJ$1997ae9b-8eba-46bc-9baf-81f2780c4601
+	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜§ÛÈJ$221564df-d54a-49ee-be3e-6ec60cd8b1c5
+j
+java:S1604†"(Make this anonymous inner class a lambda(ß„¸úÿÿÿÿJ$9a537b3c-5712-4601-9eca-31cdce05e68c
+e
+java:S1604¡"(Make this anonymous inner class a lambda(õ¿ôÍJ$7a60759c-a5c5-4f9b-b1ca-9016d7e9f489
+j
+java:S1604Á"(Make this anonymous inner class a lambda(¼¥®²ùÿÿÿÿJ$86c3a27d-e2b8-4ebb-be15-499b0dd70d37
+d
+java:S1604ã"(Make this anonymous inner class a lambda(Óğ­2J$f7888d75-283a-4aec-85f7-a61e8ad35517
+d
+java:S1604"(Make this anonymous inner class a lambda(Óğ­2J$0cb5cc2d-4ec8-4e5a-9c6e-a6b0bbf32bdd
+Œ
+java:S1301\"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿJ$cfa6bdc8-a757-4a00-be9b-95e204f99bef
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ó‘îÿÿÿÿÿJ$af0d03d0-9531-4e47-8df0-040982b17309

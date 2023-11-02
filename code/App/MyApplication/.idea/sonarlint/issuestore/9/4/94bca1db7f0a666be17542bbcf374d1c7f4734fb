@@ -1,0 +1,18 @@
+
+y
+java:S1874+"=Remove this use of "setSystemUiVisibility"; it is deprecated.(›ΉΑπJ$d6c4bcce-d16b-42d5-b84c-eed3c9121040
+ƒ
+java:S1874+"GRemove this use of "SYSTEM_UI_FLAG_LIGHT_STATUS_BAR"; it is deprecated.(›ΉΑπJ$296d05d2-c835-4b6d-bfaa-476ca605150e
+‚
+java:S1874="ARemove this use of "FragmentStatePagerAdapter"; it is deprecated.(Ιφ–όÿÿÿÿJ$857e6d8c-706f-4aa6-9e0f-8c9789177960
+b	java:S131E""Add a default case to this switch.(ΌσΫόÿÿÿÿJ$dddb4869-b232-4f77-832f-949abfb554f9
+Β
+java:S1186d"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ψ΄΄ψÿÿÿÿJ$dffc2fbe-c0aa-4d9e-b9f8-24ce8deaca0f
+Β
+java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™Ξ«ώÿÿÿÿJ$4bb89d5b-247b-4906-9a3f-2997a354d7e0
+
+java:S1874y"KRemove this use of "setOnNavigationItemSelectedListener"; it is deprecated.(δ«τρÿÿÿÿÿJ$f64092a7-bd5e-42e0-b892-0ff8ccdab1ad
+b	java:S131""Add a default case to this switch.(ψε΄΅ÿÿÿÿÿJ$4a8fbf45-a00e-45d8-899e-55852d1a80ea
+i
+java:S1604y"(Make this anonymous inner class a lambda(δ«τρÿÿÿÿÿJ$480239a7-8f99-4d35-80e9-e5ecd6d72b1f
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Σ‘ξÿÿÿÿÿJ$93b6ee57-475c-4363-8638-72ac725ce6b4

@@ -9,26 +9,26 @@ headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 pom_list=[]
 k=1
 # 唐48330首 - (1,25) - (1,3)
-# for j in range(3, 4):
+for j in range(3, 4):
 
-# 宋200000首 - (1,101) - (1,)
-for j in range(2, 4):
+# 宋200000首 - (1,101) - (1,4)
+# for j in range(4, 5):
 
-# 元39240首 - (1,25) - (1,)
-# for j in range(1, 6):
+# 元39240首 - (1,25) - (1,4)
+# for j in range(4, 5):
 
-# 明100000首 - (1,51) - (1,)
-# for j in range(1, 6):
+# 明100000首 - (1,51) - (1,4)
+# for j in range(4, 5):
 
 # 清91540首 - (1,47) - (1,4)
-# for j in range(5, 7):
+# for j in range(4, 5):
     pages = j * 200 - 199
     for i in range(pages, pages + 199):
-        # url='https://www.xungushici.com/shicis/cd-tang-p-'+str(i)
-        url='https://www.xungushici.com/shicis/cd-song-p-'+str(i)
+        url='https://www.xungushici.com/shicis/cd-tang-p-'+str(i)
+        # url='https://www.xungushici.com/shicis/cd-song-p-'+str(i)
         # url='https://www.xungushici.com/shicis/cd-yuan-p-'+str(i)
         # url='https://www.xungushici.com/shicis/cd-ming-p-'+str(i)
-        # url = 'https://www.xungushici.com/shicis/cd-qing-p-' + str(i)
+        # url='https://www.xungushici.com/shicis/cd-qing-p-'+str(i)
         r=requests.get(url,headers=headers)
         content=r.content.decode('utf-8')
         soup = BeautifulSoup(content, 'html.parser')
@@ -98,16 +98,16 @@ for j in range(2, 4):
         sheet1.write(i+1,0,pom_list[i]['title'])
         sheet1.write(i+1, 12, pom_list[i]['zhu'])
     # tang1(1990首) tang2(1990首) tang3(暂时不爬)
-    # xl.save("../data/classify/tang2_classify.xlsx")
+    xl.save("../data/classify/tang2_classify.xlsx")
 
     # song1(1990) song2(3980)
-    xl.save("../data/classify/song2_classify.xlsx")
+    # xl.save("../data/classify/song2_classify.xlsx")
 
-    # yuan1() yuan2()
-    # xl.save("../data/classify/yuan1_classify.xlsx")
+    # yuan1(1990) yuan2(3980)
+    # xl.save("../data/classify/yuan2_classify.xlsx")
 
-    # ming1() ming2()
-    # xl.save("../data/classify/ming1_classify.xlsx")
+    # ming1(3980) ming2(1990)
+    # xl.save("../data/classify/ming2_classify.xlsx")
 
     # qing1(1990) qing2(3980)
     # xl.save("../data/classify/qing4_classify.xlsx")
