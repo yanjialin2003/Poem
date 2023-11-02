@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.douyuehan.doubao.mapper.PoemMapper">
-    <select id="getOnePoem" parameterType="String" resultType="com.example.demo.bean.PoemBean">
+    <select id="getOnePoem" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">
         SELECT * FROM poetry ORDER BY rand()   LIMIT 1
     </select>
 
-    <select id="getByTitleAndAuthorSimple" parameterType="String" resultType="com.example.demo.bean.PoemBean">
+    <select id="getByTitleAndAuthorSimple" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">
         SELECT id, title,  desty,author, content, tag FROM poetry WHERE title = #{title} AND author = #{author};
     </select>
 
-    <select id="getByTitleAndAuthorDetail" parameterType="String" resultType="com.example.demo.bean.PoemBean">
+    <select id="getByTitleAndAuthorDetail" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">
         SELECT * FROM poetry WHERE title = #{title} AND author = #{author};
     </select>
 
-    <select id="getByContentDetail" parameterType="String" resultType="com.example.demo.bean.PoemBean">
+    <select id="getByContentDetail" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">
         SELECT * FROM poetry WHERE content like #{content} LIMIT 1;
     </select>
 
@@ -25,7 +25,7 @@
         SELECT DISTINCT tag FROM poetry;
     </select>
 
-    <select id="getBySearch" resultType="com.example.demo.bean.PoemBean">
+    <select id="getBySearch" resultType="com.douyuehan.doubao.model.entity.PoemBean">
         SELECT id,title,desty,author, content, tag FROM poetry WHERE title like #{key}
                                                                   OR author like #{key}
                                                                   OR content like #{key}
@@ -33,7 +33,7 @@
             LIMIT #{page},#{size};
     </select>
 
-    <select id="getByTag" resultType="com.example.demo.bean.PoemBean">
+    <select id="getByTag" resultType="com.douyuehan.doubao.model.entity.PoemBean">
         SELECT id,title, desty, author, content, tag FROM poetry
         WHERE (1!=1
         <foreach collection="dynastys" item="dynasty">

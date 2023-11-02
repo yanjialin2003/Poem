@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ApiResult</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+<link href="../style.css" rel="stylesheet" />
+</head>
+<body onload="PR.prettyPrint()">
+<pre class="prettyprint">
+<xmp>
+#import <Foundation/Foundation>;
+
+@interface ApiResult : NSObject
+
+//业务状态码
+@property (nonatomic, strong) long code;
+//结果集
+@property (nonatomic, strong) UmsUser data;
+//接口描述
+@property (nonatomic, assign) NSString message;
+
+
+@end
+</xmp>
+</pre>
+
+<pre class="prettyprint">
+<xmp>
+#import <Foundation/Foundation>;
+
+@interface UmsUser : NSObject
+
+//
+@property (nonatomic, assign) NSString id;
+//
+@property (nonatomic, assign) NSString username;
+//
+@property (nonatomic, assign) NSString alias;
+//
+@property (nonatomic, assign) NSString password;
+//
+@property (nonatomic, assign) NSString avatar;
+//
+@property (nonatomic, assign) NSString email;
+//
+@property (nonatomic, assign) NSString mobile;
+//
+@property (nonatomic, assign) NSString bio;
+//
+@property (nonatomic, strong) NSInteger score;
+//
+@property (nonatomic, assign) NSString token;
+//
+@property (nonatomic, strong) BOOL active;
+//状态。1:使用，0:已停用
+@property (nonatomic, strong) BOOL status;
+//用户角色
+@property (nonatomic, strong) NSInteger roleId;
+//
+@property (nonatomic, assign) NSString createTime;
+//
+@property (nonatomic, assign) NSString modifyTime;
+
+
+@end
+</xmp>
+</pre>
+
+
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+</body>
+</html>

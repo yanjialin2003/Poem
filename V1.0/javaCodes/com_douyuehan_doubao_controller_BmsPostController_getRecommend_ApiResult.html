@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ApiResult</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+<link href="../style.css" rel="stylesheet" />
+</head>
+<body onload="PR.prettyPrint()">
+<pre class="prettyprint lang-java">
+public class ApiResult implements Serializable{
+
+    private long code; //业务状态码
+    private BmsPost[] data; //结果集
+    private String message; //接口描述
+
+    public long getCode(){
+        return code;
+    }
+
+    public void setCode(long code){
+        this.code = code;
+    }
+
+    public BmsPost[] getData(){
+        return data;
+    }
+
+    public void setData(BmsPost[] data){
+        this.data = data;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+}
+</pre>
+
+
+<pre class="prettyprint lang-java">
+public class BmsPost implements Serializable{
+
+    private String id; //主键
+    private String title; //标题
+    private String content; //markdown
+    private String userId; //作者ID
+    private int comments; //评论数
+    private int collects; //收藏数
+    private int view; //浏览数
+    private int sectionId; //专栏ID，默认不分栏
+    private boolean top; //置顶
+    private boolean essence; //加精
+    private String createTime; //创建时间
+    private String modifyTime; //修改时间
+
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public String getContent(){
+        return content;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+
+    public String getUserId(){
+        return userId;
+    }
+
+    public void setUserId(String userId){
+        this.userId = userId;
+    }
+
+    public int getComments(){
+        return comments;
+    }
+
+    public void setComments(int comments){
+        this.comments = comments;
+    }
+
+    public int getCollects(){
+        return collects;
+    }
+
+    public void setCollects(int collects){
+        this.collects = collects;
+    }
+
+    public int getView(){
+        return view;
+    }
+
+    public void setView(int view){
+        this.view = view;
+    }
+
+    public int getSectionId(){
+        return sectionId;
+    }
+
+    public void setSectionId(int sectionId){
+        this.sectionId = sectionId;
+    }
+
+    public boolean getTop(){
+        return top;
+    }
+
+    public void setTop(boolean top){
+        this.top = top;
+    }
+
+    public boolean getEssence(){
+        return essence;
+    }
+
+    public void setEssence(boolean essence){
+        this.essence = essence;
+    }
+
+    public String getCreateTime(){
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime){
+        this.createTime = createTime;
+    }
+
+    public String getModifyTime(){
+        return modifyTime;
+    }
+
+    public void setModifyTime(String modifyTime){
+        this.modifyTime = modifyTime;
+    }
+
+}
+</pre>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ApiResult</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+<link href="../style.css" rel="stylesheet" />
+</head>
+<body onload="PR.prettyPrint()">
+<pre class="prettyprint lang-java">
+public class ApiResult implements Serializable{
+
+    private long code; //业务状态码
+    private BmsComment data; //结果集
+    private String message; //接口描述
+
+    public long getCode(){
+        return code;
+    }
+
+    public void setCode(long code){
+        this.code = code;
+    }
+
+    public BmsComment getData(){
+        return data;
+    }
+
+    public void setData(BmsComment data){
+        this.data = data;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+}
+</pre>
+
+
+<pre class="prettyprint lang-java">
+public class BmsComment implements Serializable{
+
+    private String id; //主键
+    private String content; //内容
+    private String userId; //作者ID
+    private String topicId; //topicID
+    private String createTime; //创建时间
+    private String modifyTime; //修改时间
+
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+
+    public String getContent(){
+        return content;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+
+    public String getUserId(){
+        return userId;
+    }
+
+    public void setUserId(String userId){
+        this.userId = userId;
+    }
+
+    public String getTopicId(){
+        return topicId;
+    }
+
+    public void setTopicId(String topicId){
+        this.topicId = topicId;
+    }
+
+    public String getCreateTime(){
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime){
+        this.createTime = createTime;
+    }
+
+    public String getModifyTime(){
+        return modifyTime;
+    }
+
+    public void setModifyTime(String modifyTime){
+        this.modifyTime = modifyTime;
+    }
+
+}
+</pre>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+</body>
+</html>
