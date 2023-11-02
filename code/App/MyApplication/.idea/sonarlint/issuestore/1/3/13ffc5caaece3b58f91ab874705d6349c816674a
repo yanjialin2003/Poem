@@ -1,0 +1,50 @@
+
+	java:S1161"TRename this field "COMPLETED" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Ã»ÙJ$cbde2d5d-797e-44c0-b573-7d8c8d35ca67
+™	java:S1163"YRename this field "SearchRetrofit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÔãÕùÿÿÿÿJ$90704b34-be24-4be8-8e28-38a031be48f5
+‹	java:S116B"RRename this field "ic_menu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûàmJ$423e4314-f090-428b-913d-419c8dfb3656
+”	java:S116C"TRename this field "menu_line" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±›½øÿÿÿÿJ$8797f39b-b653-4921-ae0b-9d077fbd1aed
+]
+java:S11701"!Make this final field static too.(÷Ã»ÙJ$1753eae4-a807-4918-94e6-f75997f741b1
+
+java:S14503"]Remove the "SearchRetrofit" field and declare it as a local variable in the relevant methods.(ºÔãÕùÿÿÿÿJ$974990a0-9f6e-4b86-83d4-97810d9abece
+
+java:S1450B"VRemove the "ic_menu" field and declare it as a local variable in the relevant methods.(ûàmJ$8e534506-239d-4376-a67c-b48726b7fc24
+™
+java:S1450C"XRemove the "menu_line" field and declare it as a local variable in the relevant methods.(±›½øÿÿÿÿJ$8bba6077-1808-4717-a579-637a4a15f3e3
+“
+java:S1450="WRemove the "sentence" field and declare it as a local variable in the relevant methods.(üõƒäJ$da7400b7-56a1-4851-ab69-849bc2ddf32a
+”
+java:S1450>"SRemove the "tag1" field and declare it as a local variable in the relevant methods.(Ş³Ü˜şÿÿÿÿJ$531d653b-4162-4f31-b897-04eb50e59a64
+
+java:S1450?"SRemove the "tag2" field and declare it as a local variable in the relevant methods.(—£úJ$51e53d8a-9e2b-4212-83b1-6a5d66ff42eb
+k
+java:S1874J"/Remove this use of "Handler"; it is deprecated.(ŸÇŸÇJ$f391d9a1-9605-4d83-9168-dfe66e724f14
+{
+java:S1161d":Add the "@Override" annotation above this method signature(î•ÉğûÿÿÿÿJ$c76074c9-cc62-4380-b34c-57625b6e7d17
+y
+java:S1117"<Rename "sentence" which hides the field declared at line 61.(ßÚ÷ÔJ$d400a5e9-caa3-4eca-a5a0-2d9f46fcf046
+e
+java:S1068B"+Remove this unused "ic_menu" private field.(ûàmJ$34a0b518-d875-40e7-b308-a6f7cbd27470
+n
+java:S1068C"-Remove this unused "menu_line" private field.(±›½øÿÿÿÿJ$0e5d68dd-727c-4c3c-a0a9-c12668789da6
+ˆ
+java:S1192T"GDefine a constant instead of duplicating this literal "author" 3 times.(·Ô¼îûÿÿÿÿJ$3270c367-df18-4dd8-b6d2-50c7b82f17e5
+‡
+java:S1192S"FDefine a constant instead of duplicating this literal "desty" 3 times.(ªèÎûÿÿÿÿJ$f924826b-5802-4480-95d2-7337f78a65f3
+‡
+java:S1192Q"FDefine a constant instead of duplicating this literal "title" 3 times.(òŞ¤ÛøÿÿÿÿJ$1bd2bd48-af3e-45e4-84ee-7df9b655bfec
+ƒ
+java:S1192W"HDefine a constant instead of duplicating this literal "content" 4 times.(“ºPJ$759735d8-568b-4a9d-b408-923103d313e9
+‘	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªèÎûÿÿÿÿJ$bd5bd8f4-49cf-427c-80b1-c2f4fed2a7d0
+	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜§ÛÈJ$4a7bf4b1-d442-4b47-af79-6acffcbd49ec
+i
+java:S1604o"(Make this anonymous inner class a lambda(ß„¸úÿÿÿÿJ$a1e6b0cd-05a5-4707-8574-4f2a80920ed8
+i
+java:S1604y"(Make this anonymous inner class a lambda(˜€¨ÇøÿÿÿÿJ$512991dc-abb3-4bb2-82a5-3f249afa5ba1
+j
+java:S1604‹"(Make this anonymous inner class a lambda(ú…Í©ıÿÿÿÿJ$ff118d10-1a2b-4ca1-bdae-f4cf17e4692f
+j
+java:S1604—"(Make this anonymous inner class a lambda(ˆÃ¢ıÿÿÿÿJ$f98f969e-86ae-4072-912b-5ed3890b8b4f
+d
+java:S1604Ğ"(Make this anonymous inner class a lambda(Óğ­2J$32084b41-fbcb-4909-bb17-0b395bd6db13
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ô—¤ĞJ$5ecf6b80-40bc-49f1-b18f-50d03d5c0408
