@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ApiResult</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+<link href="../style.css" rel="stylesheet" />
+</head>
+<body onload="PR.prettyPrint()">
+<pre class="prettyprint lang-java">
+public class ApiResult implements Serializable{
+
+    private long code; //业务状态码
+    private BmsPromotion[] data; //结果集
+    private String message; //接口描述
+
+    public long getCode(){
+        return code;
+    }
+
+    public void setCode(long code){
+        this.code = code;
+    }
+
+    public BmsPromotion[] getData(){
+        return data;
+    }
+
+    public void setData(BmsPromotion[] data){
+        this.data = data;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+}
+</pre>
+
+
+<pre class="prettyprint lang-java">
+public class BmsPromotion implements Serializable{
+
+    private int id; //主键
+    private String title; //广告标题
+    private String link; //广告链接
+    private String description; //说明
+
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public String getLink(){
+        return link;
+    }
+
+    public void setLink(String link){
+        this.link = link;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+
+}
+</pre>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+</body>
+</html>

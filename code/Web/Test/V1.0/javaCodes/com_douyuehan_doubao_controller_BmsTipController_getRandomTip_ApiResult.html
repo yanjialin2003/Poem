@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ApiResult</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+<link href="../style.css" rel="stylesheet" />
+</head>
+<body onload="PR.prettyPrint()">
+<pre class="prettyprint lang-java">
+public class ApiResult implements Serializable{
+
+    private long code; //业务状态码
+    private BmsTip data; //结果集
+    private String message; //接口描述
+
+    public long getCode(){
+        return code;
+    }
+
+    public void setCode(long code){
+        this.code = code;
+    }
+
+    public BmsTip getData(){
+        return data;
+    }
+
+    public void setData(BmsTip data){
+        this.data = data;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+}
+</pre>
+
+
+<pre class="prettyprint lang-java">
+public class BmsTip implements Serializable{
+
+    private int id; //主键
+    private String content; //内容
+    private String author; //作者
+    private boolean type; //1：使用，0：过期
+
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public String getContent(){
+        return content;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+
+    public String getAuthor(){
+        return author;
+    }
+
+    public void setAuthor(String author){
+        this.author = author;
+    }
+
+    public boolean getType(){
+        return type;
+    }
+
+    public void setType(boolean type){
+        this.type = type;
+    }
+
+}
+</pre>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+</body>
+</html>

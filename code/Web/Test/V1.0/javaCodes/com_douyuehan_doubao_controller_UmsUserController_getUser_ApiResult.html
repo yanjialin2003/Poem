@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ApiResult</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+<link href="../style.css" rel="stylesheet" />
+</head>
+<body onload="PR.prettyPrint()">
+<pre class="prettyprint lang-java">
+public class ApiResult implements Serializable{
+
+    private long code; //业务状态码
+    private UmsUser data; //结果集
+    private String message; //接口描述
+
+    public long getCode(){
+        return code;
+    }
+
+    public void setCode(long code){
+        this.code = code;
+    }
+
+    public UmsUser getData(){
+        return data;
+    }
+
+    public void setData(UmsUser data){
+        this.data = data;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+}
+</pre>
+
+
+<pre class="prettyprint lang-java">
+public class UmsUser implements Serializable{
+
+    private String id; //
+    private String username; //
+    private String alias; //
+    private String password; //
+    private String avatar; //
+    private String email; //
+    private String mobile; //
+    private String bio; //
+    private int score; //
+    private String token; //
+    private boolean active; //
+    private boolean status; //状态。1:使用，0:已停用
+    private int roleId; //用户角色
+    private String createTime; //
+    private String modifyTime; //
+
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+
+    public String getUsername(){
+        return username;
+    }
+
+    public void setUsername(String username){
+        this.username = username;
+    }
+
+    public String getAlias(){
+        return alias;
+    }
+
+    public void setAlias(String alias){
+        this.alias = alias;
+    }
+
+    public String getPassword(){
+        return password;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public String getAvatar(){
+        return avatar;
+    }
+
+    public void setAvatar(String avatar){
+        this.avatar = avatar;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    public String getMobile(){
+        return mobile;
+    }
+
+    public void setMobile(String mobile){
+        this.mobile = mobile;
+    }
+
+    public String getBio(){
+        return bio;
+    }
+
+    public void setBio(String bio){
+        this.bio = bio;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
+    public void setScore(int score){
+        this.score = score;
+    }
+
+    public String getToken(){
+        return token;
+    }
+
+    public void setToken(String token){
+        this.token = token;
+    }
+
+    public boolean getActive(){
+        return active;
+    }
+
+    public void setActive(boolean active){
+        this.active = active;
+    }
+
+    public boolean getStatus(){
+        return status;
+    }
+
+    public void setStatus(boolean status){
+        this.status = status;
+    }
+
+    public int getRoleId(){
+        return roleId;
+    }
+
+    public void setRoleId(int roleId){
+        this.roleId = roleId;
+    }
+
+    public String getCreateTime(){
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime){
+        this.createTime = createTime;
+    }
+
+    public String getModifyTime(){
+        return modifyTime;
+    }
+
+    public void setModifyTime(String modifyTime){
+        this.modifyTime = modifyTime;
+    }
+
+}
+</pre>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+</body>
+</html>
