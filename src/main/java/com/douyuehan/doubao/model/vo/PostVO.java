@@ -25,6 +25,10 @@ public class PostVO implements Serializable {
      */
     private String userId;
     /**
+     * 附件链接
+     */
+    private String fileLink;
+    /**
      * 头像
      */
     private String avatar;

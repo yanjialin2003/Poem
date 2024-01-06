@@ -61,6 +61,7 @@ CREATE TABLE `bms_post`  (
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '标题',
   `content` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT 'markdown内容',
   `user_id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '作者ID',
+  `file_link` varchar(20) default '' COMMENT '附件链接',
   `comments` int NOT NULL DEFAULT 0 COMMENT '评论统计',
   `collects` int NOT NULL DEFAULT 0 COMMENT '收藏统计',
   `view` int NOT NULL DEFAULT 0 COMMENT '浏览统计',
@@ -69,7 +70,7 @@ CREATE TABLE `bms_post`  (
   `section_id` int NULL DEFAULT 0 COMMENT '专栏ID',
   `create_time` datetime NOT NULL COMMENT '发布时间',
   `modify_time` datetime NULL DEFAULT NULL COMMENT '修改时间',
-  UNIQUE INDEX `title`(`title`) USING BTREE,
+--   UNIQUE INDEX `title`(`title`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   INDEX `create_time`(`create_time`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '话题表' ROW_FORMAT = DYNAMIC;
