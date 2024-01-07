@@ -75,13 +75,14 @@
             </div>
             <div id="collapse2" class="collapse in " aria-labelledby="heading2">
                     <a class="catalog-item" href="com_douyuehan_doubao_controller_BmsPostController.html#list">
-                        list
+                        获取帖子列表
                     </a>
                     <a class="catalog-item" href="com_douyuehan_doubao_controller_BmsPostController.html#create">
                         create
                     </a>
                     <a class="catalog-item" href="com_douyuehan_doubao_controller_BmsPostController.html#view">
-                        view
+                        为了添加用户浏览记录发送请求请添加用户 userID
+如果没有登录请发送 -1
                     </a>
                     <a class="catalog-item" href="com_douyuehan_doubao_controller_BmsPostController.html#getRecommend">
                         getRecommend
@@ -231,12 +232,39 @@
                 <div class="page-inner">
                     <div class="action-list">
                         <div class="action-item">
-<h2 id="list"><a href="#">list </a></h2>
+<h2 id="list"><a href="#">获取帖子列表 </a></h2>
 <p><strong>请求URL</strong></p>
 <p>
     <code>/post/list</code>
         <span class="label label-default">GET</span>
 </p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>tab</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>pageNo</td>
+                        <td>int</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>size</td>
+                        <td>int</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
     <p><strong>返回结果</strong></p>
     <pre class="prettyprint lang-json">{
 	"code":"long //业务状态码",
@@ -268,6 +296,7 @@
 		"content":"string //markdown",
 		"userId":"string //作者ID",
 		"comments":"int //评论数",
+		"fileLink":"string //文件链接",
 		"collects":"int //收藏数",
 		"view":"int //浏览数",
 		"sectionId":"int //专栏ID，默认不分栏",
@@ -288,12 +317,34 @@
                         </div>
                         <hr>
                         <div class="action-item">
-<h2 id="view"><a href="#">view </a></h2>
+<h2 id="view"><a href="#">为了添加用户浏览记录发送请求请添加用户 userID
+如果没有登录请发送 -1 </a></h2>
 <p><strong>请求URL</strong></p>
 <p>
     <code>/post/view</code>
         <span class="label label-default">GET</span>
 </p>
+        <p><strong>请求参数</strong> <span class="badge">application/x-www-form-urlencoded</span></p>
+        <table class="table table-bordered">
+            <tr>
+                <th>参数名</th>
+                <th>类型</th>
+                <th>必须</th>
+                <th>描述</th>
+            </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>userID</td>
+                        <td>string</td>
+                        <td>否</td>
+                        <td></td>
+                    </tr>
+        </table>
     <p><strong>返回结果</strong></p>
     <pre class="prettyprint lang-json">{
 	"code":"long //业务状态码",
@@ -325,6 +376,7 @@
 		"content":"string //markdown",
 		"userId":"string //作者ID",
 		"comments":"int //评论数",
+		"fileLink":"string //文件链接",
 		"collects":"int //收藏数",
 		"view":"int //浏览数",
 		"sectionId":"int //专栏ID，默认不分栏",
@@ -360,6 +412,7 @@
 		"content":"string //markdown",
 		"userId":"string //作者ID",
 		"comments":"int //评论数",
+		"fileLink":"string //文件链接",
 		"collects":"int //收藏数",
 		"view":"int //浏览数",
 		"sectionId":"int //专栏ID，默认不分栏",
@@ -417,9 +470,10 @@
             {name: 'BmsBillboardController.getNotices', url: 'com_douyuehan_doubao_controller_BmsBillboardController.html#getNotices'},
             {name: 'BmsCommentController.getCommentsByTopicID', url: 'com_douyuehan_doubao_controller_BmsCommentController.html#getCommentsByTopicID'},
             {name: 'BmsCommentController.add_comment', url: 'com_douyuehan_doubao_controller_BmsCommentController.html#add_comment'},
-            {name: 'BmsPostController.list', url: 'com_douyuehan_doubao_controller_BmsPostController.html#list'},
+            {name: 'BmsPostController.获取帖子列表', url: 'com_douyuehan_doubao_controller_BmsPostController.html#list'},
             {name: 'BmsPostController.create', url: 'com_douyuehan_doubao_controller_BmsPostController.html#create'},
-            {name: 'BmsPostController.view', url: 'com_douyuehan_doubao_controller_BmsPostController.html#view'},
+            {name: 'BmsPostController.为了添加用户浏览记录发送请求请添加用户 userID
+如果没有登录请发送 -1', url: 'com_douyuehan_doubao_controller_BmsPostController.html#view'},
             {name: 'BmsPostController.getRecommend', url: 'com_douyuehan_doubao_controller_BmsPostController.html#getRecommend'},
             {name: 'BmsPostController.update', url: 'com_douyuehan_doubao_controller_BmsPostController.html#update'},
             {name: 'BmsPostController.delete', url: 'com_douyuehan_doubao_controller_BmsPostController.html#delete'},

@@ -30,6 +30,13 @@ public class BmsPostController extends BaseController {
     @Resource
     private IUmsUserService umsUserService;
 
+    /**
+     * 获取帖子列表
+     * @param tab
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
     @GetMapping("/list")
     public ApiResult<Page<PostVO>> list(@RequestParam(value = "tab", defaultValue = "latest") String tab,
                                         @RequestParam(value = "pageNo", defaultValue = "1")  Integer pageNo,
@@ -45,9 +52,17 @@ public class BmsPostController extends BaseController {
         BmsPost topic = iBmsPostService.create(dto, user);
         return ApiResult.success(topic);
     }
+
+    /**
+     * 为了添加用户浏览记录发送请求请添加用户 userID
+     * 如果没有登录请发送 -1
+     * @param id
+     * @param userID
+     * @return
+     */
     @GetMapping()
-    public ApiResult<Map<String, Object>> view(@RequestParam("id") String id) {
-        Map<String, Object> map = iBmsPostService.viewTopic(id);
+    public ApiResult<Map<String, Object>> view(@RequestParam("id") String id, @RequestParam("userID") String userID) {
+        Map<String, Object> map = iBmsPostService.viewTopic(id, userID);
         return ApiResult.success(map);
     }
 
@@ -72,7 +87,7 @@ public class BmsPostController extends BaseController {
         UmsUser umsUser = umsUserService.getUserByUsername(userName);
         BmsPost byId = iBmsPostService.getById(id);
         Assert.notNull(byId, "来晚一步，话题已不存在");
-        Assert.isTrue(byId.getUserId().equals(umsUser.getId()), "你为什么可以删除别人的话题？？？");
+        Assert.isTrue(byId.getUserId().equals(umsUser.getId()), "不是自己的话题哦！");
         iBmsPostService.removeById(id);
         return ApiResult.success(null,"删除成功");
     }

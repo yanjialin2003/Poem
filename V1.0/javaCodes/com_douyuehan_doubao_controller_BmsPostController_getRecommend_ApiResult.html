@@ -50,6 +50,7 @@ public class BmsPost implements Serializable{
     private String content; //markdown
     private String userId; //作者ID
     private int comments; //评论数
+    private String fileLink; //文件链接
     private int collects; //收藏数
     private int view; //浏览数
     private int sectionId; //专栏ID，默认不分栏
@@ -96,6 +97,14 @@ public class BmsPost implements Serializable{
 
     public void setComments(int comments){
         this.comments = comments;
+    }
+
+    public String getFileLink(){
+        return fileLink;
+    }
+
+    public void setFileLink(String fileLink){
+        this.fileLink = fileLink;
     }
 
     public int getCollects(){

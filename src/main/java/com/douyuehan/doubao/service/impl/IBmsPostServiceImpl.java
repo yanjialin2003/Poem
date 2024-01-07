@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.douyuehan.doubao.mapper.BmsTagMapper;
 import com.douyuehan.doubao.mapper.BmsTopicMapper;
 import com.douyuehan.doubao.mapper.UmsUserMapper;
+import com.douyuehan.doubao.mapper.UserHistoryMapper;
 import com.douyuehan.doubao.model.dto.CreateTopicDTO;
 import com.douyuehan.doubao.model.entity.BmsPost;
 import com.douyuehan.doubao.model.entity.BmsTag;
@@ -37,6 +38,9 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
     @Resource
     private UmsUserMapper umsUserMapper;
 
+    @Resource
+    private UserHistoryMapper userHistoryMapper;
+
     @Autowired
     @Lazy
     private IBmsTagService iBmsTagService;
@@ -65,6 +69,7 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
         BmsPost topic = BmsPost.builder()
                 .userId(user.getId())
                 .title(dto.getTitle())
+                .fileLink(dto.getFile_link())
                 .content(EmojiParser.parseToAliases(dto.getContent()))
                 .createTime(new Date())
                 .build();
@@ -86,7 +91,7 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
     }
 
     @Override
-    public Map<String, Object> viewTopic(String id) {
+    public Map<String, Object> viewTopic(String id, String userID) {
         Map<String, Object> map = new HashMap<>(16);
         BmsPost topic = this.baseMapper.selectById(id);
         Assert.notNull(topic, "当前话题不存在,或已被作者删除");
@@ -111,6 +116,14 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
         ProfileVO user = iUmsUserService.getUserProfile(topic.getUserId());
         map.put("user", user);
 
+        // 添加用户浏览记录
+        if(userID.equals("-1")){
+            return map;
+        }
+        String  historyID = userHistoryMapper.isHistoryContained(userID, id);
+        if (historyID == null){
+            userHistoryMapper.insertHistory(userID, id);
+        }
         return map;
     }
 

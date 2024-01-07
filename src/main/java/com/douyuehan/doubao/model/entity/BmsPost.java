@@ -50,7 +50,12 @@ public class BmsPost implements Serializable {
     @TableField("comments")
     @Builder.Default
     private Integer comments = 0;
-
+    /**
+     * 文件链接
+     */
+    @TableField("file_link")
+    @Builder.Default
+    private String fileLink = "";
     /**
      * 收藏数
      */

@@ -18,7 +18,10 @@ public class CreateTopicDTO implements Serializable {
      * 内容
      */
     private String content;
-
+    /**
+     * 附件链接
+     */
+    private String file_link;
     /**
      * 标签
      */
