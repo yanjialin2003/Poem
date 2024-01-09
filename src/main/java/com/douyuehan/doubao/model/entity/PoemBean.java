@@ -1,40 +1,52 @@
 package com.douyuehan.doubao.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotBlank;
+
+@Data
+@Builder
+@TableName("poetry")
+@AllArgsConstructor
+@NoArgsConstructor
 public class PoemBean {
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     private String id;
+    @NotBlank(message = "标题不可以为空")
+    @TableField(value = "title")
     private String title;
+    @TableField("desty")
     private String desty;
+    @TableField("essence")
     private String author;
+    @NotBlank(message = "内容不可以为空")
+    @TableField("`content`")
     private String content;
+    @TableField("trans_content")
     private String trans_content;
+    @TableField("appear")
     private String appear;
+    @TableField("background")
     private String background;
+    @TableField("tag")
     private String tag;
+    @TableField("formal")
     private String formal;
-    private String data;
-    private String ci_name;
-    private String qu_name;
+    @TableField("date")
+    private String date;
+    @TableField("cipai")
+    private String cipai;
+    @TableField("qupai")
+    private String qupai;
+    @TableField("zhu")
     private String zhu;
-
-    public PoemBean() {
-    }
-
-    public PoemBean(String id, String title, String desty, String author, String content, String trans_content, String appear, String background, String tag, String formal, String data, String ci_name, String qu_name, String zhu) {
-        this.id = id;
-        this.title = title;
-        this.desty = desty;
-        this.author = author;
-        this.content = content;
-        this.trans_content = trans_content;
-        this.appear = appear;
-        this.background = background;
-        this.tag = tag;
-        this.formal = formal;
-        this.data = data;
-        this.ci_name = ci_name;
-        this.qu_name = qu_name;
-        this.zhu = zhu;
-    }
 
     public String getId() {
         return id;
@@ -116,28 +128,28 @@ public class PoemBean {
         this.formal = formal;
     }
 
-    public String getData() {
-        return data;
+    public String getDate() {
+        return date;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getCi_name() {
-        return ci_name;
+    public String getCipai() {
+        return cipai;
     }
 
-    public void setCi_name(String ci_name) {
-        this.ci_name = ci_name;
+    public void setCipai(String cipai) {
+        this.cipai = cipai;
     }
 
-    public String getQu_name() {
-        return qu_name;
+    public String getQupai() {
+        return qupai;
     }
 
-    public void setQu_name(String qu_name) {
-        this.qu_name = qu_name;
+    public void setQupai(String qupai) {
+        this.qupai = qupai;
     }
 
     public String getZhu() {
