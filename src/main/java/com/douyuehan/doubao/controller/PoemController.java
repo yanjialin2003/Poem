@@ -1,8 +1,10 @@
 package com.douyuehan.doubao.controller;
 
 import com.douyuehan.doubao.common.api.ApiResult;
+import com.douyuehan.doubao.model.entity.PoemAuthor;
 import com.douyuehan.doubao.model.entity.PoemBean;
 import com.douyuehan.doubao.service.IBmsTipService;
+import com.douyuehan.doubao.service.PoemAuthorService;
 import com.douyuehan.doubao.service.PoemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,9 @@ public class PoemController {
     PoemService poemService;
     @Autowired
     IBmsTipService iBmsTipService;
+
+    @Autowired
+    PoemAuthorService poemAuthorService;
 
     //随机获取一首诗
     @RequestMapping("/getOnePoem")
@@ -37,6 +42,7 @@ public class PoemController {
     @RequestMapping(value = "/getByTitleAndAuthorDetail", method = RequestMethod.GET)
     public ApiResult<PoemBean> getByTitleAndAuthorDetail(String title, String author) {
         PoemBean poemBean = poemService.getByTitleAndAuthorDetail(title, author);
+        // 选出名句
         List<String> allStars = iBmsTipService.getStars(title, author);
         List<String> stars = new ArrayList<>();
         for (String star : allStars){
@@ -45,6 +51,9 @@ public class PoemController {
             }
         }
         poemBean.setStars(stars);
+        // 查找诗人
+        PoemAuthor poemAuthor = poemAuthorService.getAuthor(poemBean.getAuthor(), poemBean.getDesty());
+        poemBean.setAuthorDetail(poemAuthor);
         return ApiResult.success(poemBean);
     }
 

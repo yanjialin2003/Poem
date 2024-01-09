@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.douyuehan.doubao.mapper.PoemAuthorMapper">
+
+    <select id="getAuthor" resultType="com.douyuehan.doubao.model.entity.PoemAuthor" parameterType="String">
+        select *
+        from author t
+        WHERE t.name LIKE  #{name}
+          AND t.desty LIKE  #{desty}
+    </select>
+
+</mapper>

@@ -1,130 +1,130 @@
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:03 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find java src paths:  [D:\practice\doubao_community_backend\src\main\java\]
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:03 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: project type not set, try to figure out...
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:03 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start find controllers in path : D:\practice\doubao_community_backend\src\main\java\
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsBillboardController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsCommentController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsPostController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsPromotionController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsRelationshipController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsSearchController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsTagController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : BmsTipController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : PoemController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: find controller file : UmsUserController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsBillboardController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsBillboardController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsCommentController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsCommentController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsPostController.java
-1月 09, 2024 4:59:07 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsPostController.java, className : Page, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsPostController.java, className : Map, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsPostController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsPromotionController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsPromotionController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsRelationshipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsRelationshipController.java, className : Map, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsRelationshipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsSearchController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsSearchController.java, className : Page, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsSearchController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsTagController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsTagController.java, className : Map, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsTagController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : BmsTipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : BmsTipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : PoemController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : PoemController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to parse controller file : UmsUserController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\UmsUserController.java, className : Map, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\UmsUserController.java, className : Map, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils warn
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils warn
 警告: warning!! Cannot find java file , in java file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\UmsUserController.java, className : Map, we cannot found more information of it, you've better to make it a JavaBean
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to parse controller file : UmsUserController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: generate api docs start...
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsBillboardController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsBillboardController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsCommentController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsCommentController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsPostController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsPostController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsPromotionController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsPromotionController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:04 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsRelationshipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsRelationshipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsSearchController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsSearchController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsTagController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsTagController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsTipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\BmsTipController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\PoemController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\PoemController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: start to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\UmsUserController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: success to generate docs for controller file : D:\practice\doubao_community_backend\src\main\java\com\douyuehan\doubao\controller\UmsUserController.java
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: generate index start !!!
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: generate index done !!!
-1月 09, 2024 4:59:08 下午 io.github.yedaxia.apidocs.LogUtils info
+1月 09, 2024 9:46:05 下午 io.github.yedaxia.apidocs.LogUtils info
 信息: info: generate api docs done !!!

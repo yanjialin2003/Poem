@@ -25,7 +25,7 @@ public class PoemBean {
     private String title;
     @TableField("desty")
     private String desty;
-    @TableField("essence")
+    @TableField("author")
     private String author;
     @NotBlank(message = "内容不可以为空")
     @TableField("`content`")
@@ -38,8 +38,8 @@ public class PoemBean {
     private String background;
     @TableField("tag")
     private String tag;
-    @TableField("formal")
-    private String formal;
+    @TableField("type")
+    private String type;
     @TableField("date")
     private String date;
     @TableField("cipai")
@@ -50,6 +50,15 @@ public class PoemBean {
     private String zhu;
 
     private List<String> stars;
+    private PoemAuthor authorDetail;
+
+    public PoemAuthor getAuthorDetail() {
+        return authorDetail;
+    }
+
+    public void setAuthorDetail(PoemAuthor authorDetail) {
+        this.authorDetail = authorDetail;
+    }
 
     public List<String> getStars() {
         return stars;
@@ -131,12 +140,12 @@ public class PoemBean {
         this.tag = tag;
     }
 
-    public String getFormal() {
-        return formal;
+    public String getType() {
+        return type;
     }
 
-    public void setFormal(String formal) {
-        this.formal = formal;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getDate() {

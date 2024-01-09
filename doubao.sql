@@ -253,10 +253,27 @@ INSERT INTO `ums_user` VALUES ('1349618748226658305', 'zhangsan', 'zhangsan', '$
             appear text COMMENT '赏析',
             background text COMMENT '写诗背景',
             tag varchar(30) COMMENT '标签',
+            type varchar(20) COMMENT '诗词类型',
+            `date` varchar(10) COMMENT '年代',
             cipai varchar(20) COMMENT '词牌名',
             qupai varchar(20) COMMENT '曲牌名',
-            `date` text COMMENT '年代',
             zhu text COMMENT '诗词注释'
 );
+
+ DROP TABLE IF EXISTS `author`;
+ CREATE TABLE `author` (
+      id varchar(20) primary key COMMENT '诗人ID',
+     `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '诗人名字',
+     brief text COMMENT '诗人简介',
+     poem_count int COMMENT '诗词数量',
+     experience text COMMENT '人生经历',
+     photo varchar(50) COMMENT '照片',
+     desty varchar(10) COMMENT '所属朝代',
+     start_year varchar(10),
+     end_year varchar(10),
+     zi varchar(10) COMMENT '字',
+     hao varchar(10) COMMENT '号'
+ );
+
 
 SET FOREIGN_KEY_CHECKS = 1;
