@@ -7,4 +7,12 @@
         order by rand()
         limit 1
     </select>
+
+    <select id="getStars" resultType="String" parameterType="String">
+        select content
+        from bms_tip
+        WHERE author LIKE CONCAT('%', #{title}, '%')
+          AND author LIKE CONCAT('%', #{author}, '%')
+    </select>
+
 </mapper>

@@ -8,13 +8,17 @@ import com.douyuehan.doubao.model.entity.BmsTip;
 import com.douyuehan.doubao.service.IBmsBillboardService;
 import com.douyuehan.doubao.service.IBmsTipService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Slf4j
 @Service
 public class IBmsTipServiceImpl extends ServiceImpl<BmsTipMapper
         , BmsTip> implements IBmsTipService {
-
+    @Autowired
+    BmsTipMapper bmsTipMapper;
     @Override
     public BmsTip getRandomTip() {
         BmsTip todayTip = null;
@@ -24,5 +28,11 @@ public class IBmsTipServiceImpl extends ServiceImpl<BmsTipMapper
             log.info("tip转化失败");
         }
         return todayTip;
+    }
+
+    @Override
+    public List<String> getStars(String title, String author) {
+        List<String> stars = bmsTipMapper.getStars(title, author);
+        return stars;
     }
 }

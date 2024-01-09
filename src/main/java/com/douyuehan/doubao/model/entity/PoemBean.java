@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 @Data
 @Builder
@@ -47,6 +48,16 @@ public class PoemBean {
     private String qupai;
     @TableField("zhu")
     private String zhu;
+
+    private List<String> stars;
+
+    public List<String> getStars() {
+        return stars;
+    }
+
+    public void setStars(List<String> stars) {
+        this.stars = stars;
+    }
 
     public String getId() {
         return id;
