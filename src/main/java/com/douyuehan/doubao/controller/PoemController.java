@@ -35,9 +35,8 @@ public class PoemController {
 
     //通过诗名和作者找到对应诗，返回JavaBean类型的Json字符串
     @RequestMapping(value = "/getByTitleAndAuthorSimple", method = {RequestMethod.GET, RequestMethod.POST})
-    public ApiResult<PoemBean> getByTitleAndAuthorSimple(@RequestBody String jsonData) {
-        Map<String, String> resultMap = new Gson().fromJson(jsonData, new TypeToken<Map<String, String>>(){}.getType());
-        PoemBean poemBean = poemService.getByTitleAndAuthorSimple(resultMap.get("title"), resultMap.get("author"));
+    public ApiResult<PoemBean> getByTitleAndAuthorSimple(String id) {
+        PoemBean poemBean = poemService.getByTitleAndAuthorSimple(id);
         return ApiResult.success(poemBean);
     }
 

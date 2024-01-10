@@ -6,7 +6,7 @@
     </select>
 
     <select id="getByTitleAndAuthorSimple" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">
-        SELECT id, title,  desty,author, content, tag FROM poetry WHERE title = #{title} AND author = #{author};
+        SELECT id, title,  desty,author, content, tag FROM poetry WHERE id = #{id} ;
     </select>
 
     <select id="getByTitleAndAuthorDetail" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">

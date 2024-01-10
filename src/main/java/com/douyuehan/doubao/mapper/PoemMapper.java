@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface PoemMapper {
     PoemBean getOnePoem();
-    PoemBean getByTitleAndAuthorSimple(String title, String author);
+    PoemBean getByTitleAndAuthorSimple(String id);
     PoemBean getByTitleAndAuthorDetail(String id);
     PoemBean getByContentDetail(String content);
 

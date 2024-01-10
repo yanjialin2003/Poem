@@ -22,8 +22,8 @@ public class PoemServiceImpl implements PoemService {
     }
 
     @Override
-    public PoemBean getByTitleAndAuthorSimple(String title, String author){
-        PoemBean poemBean = poemMapper.getByTitleAndAuthorSimple(title, author);
+    public PoemBean getByTitleAndAuthorSimple(String id){
+        PoemBean poemBean = poemMapper.getByTitleAndAuthorSimple(id);
         return poemBean;
     }
     @Override
