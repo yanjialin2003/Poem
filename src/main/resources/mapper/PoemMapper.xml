@@ -10,7 +10,7 @@
     </select>
 
     <select id="getByTitleAndAuthorDetail" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">
-        SELECT * FROM poetry WHERE title = #{title} AND author = #{author};
+        SELECT * FROM poetry WHERE id = #{id} ;
     </select>
 
     <select id="getByContentDetail" parameterType="String" resultType="com.douyuehan.doubao.model.entity.PoemBean">

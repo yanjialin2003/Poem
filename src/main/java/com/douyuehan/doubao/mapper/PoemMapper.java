@@ -9,7 +9,7 @@ import java.util.List;
 public interface PoemMapper {
     PoemBean getOnePoem();
     PoemBean getByTitleAndAuthorSimple(String title, String author);
-    PoemBean getByTitleAndAuthorDetail(String title, String author);
+    PoemBean getByTitleAndAuthorDetail(String id);
     PoemBean getByContentDetail(String content);
 
     List<String> getAllDynasty();

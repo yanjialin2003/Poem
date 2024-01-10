@@ -6,13 +6,14 @@ import com.douyuehan.doubao.model.entity.PoemBean;
 import com.douyuehan.doubao.service.IBmsTipService;
 import com.douyuehan.doubao.service.PoemAuthorService;
 import com.douyuehan.doubao.service.PoemService;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/poem")
@@ -33,17 +34,18 @@ public class PoemController {
     }
 
     //通过诗名和作者找到对应诗，返回JavaBean类型的Json字符串
-    @RequestMapping(value = "/getByTitleAndAuthorSimple", method = RequestMethod.GET)
-    public ApiResult<PoemBean> getByTitleAndAuthorSimple(String title, String author) {
-        PoemBean poemBean = poemService.getByTitleAndAuthorSimple(title, author);
+    @RequestMapping(value = "/getByTitleAndAuthorSimple", method = {RequestMethod.GET, RequestMethod.POST})
+    public ApiResult<PoemBean> getByTitleAndAuthorSimple(@RequestBody String jsonData) {
+        Map<String, String> resultMap = new Gson().fromJson(jsonData, new TypeToken<Map<String, String>>(){}.getType());
+        PoemBean poemBean = poemService.getByTitleAndAuthorSimple(resultMap.get("title"), resultMap.get("author"));
         return ApiResult.success(poemBean);
     }
 
-    @RequestMapping(value = "/getByTitleAndAuthorDetail", method = RequestMethod.GET)
-    public ApiResult<PoemBean> getByTitleAndAuthorDetail(String title, String author) {
-        PoemBean poemBean = poemService.getByTitleAndAuthorDetail(title, author);
+    @RequestMapping(value = "/getByTitleAndAuthorDetail", method = {RequestMethod.GET, RequestMethod.POST})
+    public ApiResult<PoemBean> getByTitleAndAuthorDetail(String id) {
+        PoemBean poemBean = poemService.getByTitleAndAuthorDetail(id);
         // 选出名句
-        List<String> allStars = iBmsTipService.getStars(title, author);
+        List<String> allStars = iBmsTipService.getStars(poemBean.getTitle(), poemBean.getAuthor());
         List<String> stars = new ArrayList<>();
         for (String star : allStars){
             if(poemBean.getContent().contains(star)){
@@ -60,14 +62,14 @@ public class PoemController {
     /**
      * 通过输入的内容，进行模糊查询（此处又疑问，可能查到多个匹配诗句，根据前端输入要求可以再调整）
      */
-    @RequestMapping(value = "/getByContentDetail", method = RequestMethod.GET)
+    @RequestMapping(value = "/getByContentDetail", method = {RequestMethod.GET, RequestMethod.POST})
     public ApiResult<PoemBean> getByContentDetail(String content) {
         PoemBean poemBean = poemService.getByContentDetail(content);
         return ApiResult.success(poemBean);
     }
 
     //获取所有朝代
-    @RequestMapping(value = "/getAllDynasty", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAllDynasty", method = {RequestMethod.GET, RequestMethod.POST})
     public ApiResult<List<String>> getAllDynasty() {
         List<String> list = poemService.getAllDynasty();
         return ApiResult.success(list);
