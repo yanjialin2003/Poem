@@ -53,7 +53,7 @@
         SELECT t.id,
         t.title,
         t.user_id,
-        t.file_link
+        t.file_link,
         t.comments,
         t.view,
         t.collects,
