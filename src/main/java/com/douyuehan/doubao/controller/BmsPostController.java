@@ -8,6 +8,8 @@ import com.douyuehan.doubao.model.entity.UmsUser;
 import com.douyuehan.doubao.model.vo.PostVO;
 import com.douyuehan.doubao.service.IBmsPostService;
 import com.douyuehan.doubao.service.IUmsUserService;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.vdurmont.emoji.EmojiParser;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
@@ -92,4 +94,11 @@ public class BmsPostController extends BaseController {
         return ApiResult.success(null,"删除成功");
     }
 
+    @GetMapping("/getByListOfID")
+    public ApiResult<List<PostVO>> getByListOfID(@RequestParam(value = "IDList") String IDList) {
+        Gson gson = new Gson();
+        List<String> listID = gson.fromJson(IDList, new TypeToken<List<String>>(){}.getType());
+        List<PostVO> list = iBmsPostService.getByListOfID(listID);
+        return ApiResult.success(list);
+    }
 }

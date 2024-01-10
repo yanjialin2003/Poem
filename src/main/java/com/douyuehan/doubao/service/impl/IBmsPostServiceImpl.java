@@ -140,6 +140,11 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
         return iPage;
     }
 
+    @Override
+    public List<PostVO> getByListOfID(List<String> listID) {
+        return baseMapper.getByListOfID(listID);
+    }
+
     private void setTopicTags(Page<PostVO> iPage) {
         iPage.getRecords().forEach(topic -> {
             List<BmsTopicTag> topicTags = IBmsTopicTagService.selectByTopicId(topic.getId());

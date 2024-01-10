@@ -2,7 +2,7 @@ server:
   port: 8000
 
 web:
-  domain: http://localhost
+  domain: http://0.0.0.0
 
 spring:
   datasource:

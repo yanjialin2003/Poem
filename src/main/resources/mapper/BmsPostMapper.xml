@@ -77,4 +77,21 @@
         </where>
         order by t.view desc, t.create_time desc
     </select>
+
+    <select id="getByListOfID" resultType="com.douyuehan.doubao.model.vo.PostVO">
+        SELECT
+        t.id,t.title,t.user_id,t.file_link,t.comments,
+        t.view,t.collects,t.top,t.essence,
+        t.create_time ,t.modify_time ,
+        u.username,u.alias, u.avatar
+        FROM bms_post t
+        LEFT JOIN ums_user u
+        ON t.user_id = u.id
+        <where>
+            1 != 1
+            <foreach collection="listID" item="ID">
+                 OR t.id = #{ID}
+            </foreach>
+        </where>
+    </select>
 </mapper>

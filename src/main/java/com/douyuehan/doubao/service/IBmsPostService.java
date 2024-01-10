@@ -52,4 +52,6 @@ public interface IBmsPostService extends IService<BmsPost> {
      * @return
      */
     Page<PostVO> searchByKey(String keyword, Page<PostVO> page);
+
+    List<PostVO> getByListOfID(List<String> listID);
 }

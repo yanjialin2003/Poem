@@ -36,4 +36,6 @@ public interface BmsTopicMapper extends BaseMapper<BmsPost> {
      * @return
      */
     Page<PostVO> searchByKey(@Param("page") Page<PostVO> page, @Param("keyword") String keyword);
+
+    List<PostVO> getByListOfID(List<String> listID);
 }
