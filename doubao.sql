@@ -237,14 +237,14 @@ INSERT INTO `ums_user` VALUES ('1349618748226658305', 'zhangsan', 'zhangsan', '$
 
  DROP TABLE IF EXISTS `user_history`;
  CREATE TABLE `user_history` (
-    `id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci PRIMARY KEY COMMENT '浏览记录自增ID',
+    `id` varchar(20)  CHARACTER SET utf8 COLLATE utf8_general_ci auto_increment PRIMARY KEY COMMENT '浏览记录自增ID',
     `user_id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户ID',
     `post_id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '话题ID'
  );
 
  DROP TABLE IF EXISTS `poetry`;
  CREATE TABLE `poetry` (
-            `id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci PRIMARY KEY COMMENT '诗词ID',
+            `id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci auto_increment PRIMARY KEY COMMENT '诗词ID',
             `title` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci  COMMENT '诗名',
             `desty` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci  COMMENT '朝代',
             `author` varchar(20) COMMENT '诗人名字',
@@ -262,7 +262,7 @@ INSERT INTO `ums_user` VALUES ('1349618748226658305', 'zhangsan', 'zhangsan', '$
 
  DROP TABLE IF EXISTS `author`;
  CREATE TABLE `author` (
-      id varchar(20) primary key COMMENT '诗人ID',
+      id varchar(20) auto_increment primary key COMMENT '诗人ID',
      `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '诗人名字',
      brief text COMMENT '诗人简介',
      poem_count int COMMENT '诗词数量',
@@ -277,3 +277,6 @@ INSERT INTO `ums_user` VALUES ('1349618748226658305', 'zhangsan', 'zhangsan', '$
 
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+ ALTER TABLE Poetry
+     ADD COLUMN fig VARCHAR(255) DEFAULT 'https://th.bing.com/th/id/OIP.nGNrlQQru-n7vvPDh7A89gHaFm?rs=1&pid=ImgDetMain';

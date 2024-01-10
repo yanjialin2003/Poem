@@ -49,6 +49,9 @@ public class PoemBean {
     @TableField("zhu")
     private String zhu;
 
+    @TableField("fig")
+    private String fig;
+
     private List<String> stars;
     private PoemAuthor authorDetail;
 
