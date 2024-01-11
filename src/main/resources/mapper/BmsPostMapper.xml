@@ -60,8 +60,8 @@
         t.collects,
         t.top,
         t.essence,
-        t.create_time,
-        t.modify_time,
+        date_format(t.create_time,'%Y-%m-%d') create_time ,
+        date_format(t.modify_time,'%Y-%m-%d') modify_time ,
         u.username,
         u.alias,
         u.avatar
@@ -83,7 +83,8 @@
         SELECT
         t.id,t.title,t.user_id,t.file_link,t.comments,
         t.view,t.collects,t.top,t.essence,
-        t.create_time ,t.modify_time ,
+        date_format(t.create_time,'%Y-%m-%d') create_time ,
+        date_format(t.modify_time,'%Y-%m-%d') modify_time ,
         u.username,u.alias, u.avatar
         FROM bms_post t
         LEFT JOIN ums_user u

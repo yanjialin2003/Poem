@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -78,7 +79,8 @@ public class BmsPostController extends BaseController {
     public ApiResult<BmsPost> update(@RequestHeader(value = USER_NAME) String userName, @Valid @RequestBody BmsPost post) {
         UmsUser umsUser = umsUserService.getUserByUsername(userName);
         Assert.isTrue(umsUser.getId().equals(post.getUserId()), "非本人无权修改");
-        post.setModifyTime(new Date());
+
+        post.setModifyTime(new Date().toString());
         post.setContent(EmojiParser.parseToAliases(post.getContent()));
         iBmsPostService.updateById(post);
         return ApiResult.success(post);

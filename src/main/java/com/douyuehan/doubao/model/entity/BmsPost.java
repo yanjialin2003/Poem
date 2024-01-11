@@ -95,11 +95,11 @@ public class BmsPost implements Serializable {
      * 创建时间
      */
     @TableField(value = "create_time", fill = FieldFill.INSERT)
-    private Date createTime;
+    private String  createTime;
 
     /**
      * 修改时间
      */
     @TableField(value = "modify_time", fill = FieldFill.UPDATE)
-    private Date modifyTime;
+    private String modifyTime;
 }

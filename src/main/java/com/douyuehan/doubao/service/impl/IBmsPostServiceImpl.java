@@ -27,6 +27,7 @@ import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -71,7 +72,7 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
                 .title(dto.getTitle())
                 .fileLink(dto.getFile_link())
                 .content(EmojiParser.parseToAliases(dto.getContent()))
-                .createTime(new Date())
+                .createTime(new Date().toString())
                 .build();
         this.baseMapper.insert(topic);
 
@@ -95,6 +96,10 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
         Map<String, Object> map = new HashMap<>(16);
         BmsPost topic = this.baseMapper.selectById(id);
         Assert.notNull(topic, "当前话题不存在,或已被作者删除");
+        topic.setCreateTime(topic.getCreateTime().substring(0, 10));
+        if (!topic.getModifyTime().equals("") && topic.getModifyTime() != null){
+            topic.setModifyTime(topic.getModifyTime().substring(0, 10));
+        }
         // 查询话题详情
         topic.setView(topic.getView() + 1);
         this.baseMapper.updateById(topic);
