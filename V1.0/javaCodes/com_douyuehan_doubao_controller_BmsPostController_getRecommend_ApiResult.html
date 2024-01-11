@@ -51,6 +51,7 @@ public class BmsPost implements Serializable{
     private String userId; //作者ID
     private int comments; //评论数
     private String fileLink; //文件链接
+    private int poemLink; //诗词ID
     private int collects; //收藏数
     private int view; //浏览数
     private int sectionId; //专栏ID，默认不分栏
@@ -105,6 +106,14 @@ public class BmsPost implements Serializable{
 
     public void setFileLink(String fileLink){
         this.fileLink = fileLink;
+    }
+
+    public int getPoemLink(){
+        return poemLink;
+    }
+
+    public void setPoemLink(int poemLink){
+        this.poemLink = poemLink;
     }
 
     public int getCollects(){

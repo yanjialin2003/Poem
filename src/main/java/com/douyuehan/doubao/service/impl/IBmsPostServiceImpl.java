@@ -71,6 +71,7 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
                 .userId(user.getId())
                 .title(dto.getTitle())
                 .fileLink(dto.getFile_link())
+                .poem_link(dto.getPoem_link())
                 .content(EmojiParser.parseToAliases(dto.getContent()))
                 .createTime(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date()))
                 .build();
@@ -97,7 +98,7 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
         BmsPost topic = this.baseMapper.selectById(id);
         Assert.notNull(topic, "当前话题不存在,或已被作者删除");
         topic.setCreateTime(topic.getCreateTime().substring(0, 10));
-        if (!topic.getModifyTime().equals("") && topic.getModifyTime() != null){
+        if (topic.getModifyTime() != null && !topic.getModifyTime().equals("")){
             topic.setModifyTime(topic.getModifyTime().substring(0, 10));
         }
         // 查询话题详情

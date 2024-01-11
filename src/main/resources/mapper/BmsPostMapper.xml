@@ -6,6 +6,7 @@
         <result column="title" property="title"/>
         <result column="user_id" property="userId"/>
         <result column="file_link" property="fileLink"/>
+        <result column="poem_link" property="poem_link"/>
         <result column="comments" property="comments"/>
         <result column="view" property="view"/>
         <result column="collects" property="collects"/>

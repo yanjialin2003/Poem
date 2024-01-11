@@ -29,6 +29,10 @@ public class PostVO implements Serializable {
      */
     private String fileLink;
     /**
+     * 附件链接
+     */
+    private Integer poem_link;
+    /**
      * 头像
      */
     private String avatar;

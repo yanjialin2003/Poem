@@ -19,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 public class PoemBean {
     @TableId(value = "id", type = IdType.ASSIGN_ID)
-    private String id;
+    private Integer id;
     @NotBlank(message = "标题不可以为空")
     @TableField(value = "title")
     private String title;
@@ -71,11 +71,11 @@ public class PoemBean {
         this.stars = stars;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

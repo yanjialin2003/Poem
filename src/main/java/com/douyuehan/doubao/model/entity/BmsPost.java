@@ -57,6 +57,12 @@ public class BmsPost implements Serializable {
     @Builder.Default
     private String fileLink = "";
     /**
+     * 诗词ID
+     */
+    @TableField("poem_link")
+    @Builder.Default
+    private Integer poem_link = -1;
+    /**
      * 收藏数
      */
     @TableField("collects")

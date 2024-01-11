@@ -23,6 +23,10 @@ public class CreateTopicDTO implements Serializable {
      */
     private String file_link;
     /**
+     * 诗词ID
+     */
+    private Integer poem_link;
+    /**
      * 标签
      */
     private List<String> tags;
