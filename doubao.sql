@@ -237,8 +237,8 @@ INSERT INTO `ums_user` VALUES ('1349618748226658305', 'zhangsan', 'zhangsan', '$
 
  DROP TABLE IF EXISTS `user_history`;
  CREATE TABLE `user_history` (
-    `id` varchar(20)  CHARACTER SET utf8 COLLATE utf8_general_ci auto_increment PRIMARY KEY COMMENT '浏览记录自增ID',
-    `user_id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户ID',
+    `id` int auto_increment PRIMARY KEY COMMENT '浏览记录自增ID',
+    `user_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
     `post_id` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '话题ID'
  );
 

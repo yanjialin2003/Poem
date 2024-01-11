@@ -91,7 +91,7 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
     }
 
     @Override
-    public Map<String, Object> viewTopic(String id, String userID) {
+    public Map<String, Object> viewTopic(String id, String userName) {
         Map<String, Object> map = new HashMap<>(16);
         BmsPost topic = this.baseMapper.selectById(id);
         Assert.notNull(topic, "当前话题不存在,或已被作者删除");
@@ -117,12 +117,12 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
         map.put("user", user);
 
         // 添加用户浏览记录
-        if(userID.equals("-1")){
+        if(userName.equals("-1")){
             return map;
         }
-        String  historyID = userHistoryMapper.isHistoryContained(userID, id);
+        String  historyID = userHistoryMapper.isHistoryContained(userName, id);
         if (historyID == null){
-            userHistoryMapper.insertHistory(userID, id);
+            userHistoryMapper.insertHistory(userName, id);
         }
         return map;
     }

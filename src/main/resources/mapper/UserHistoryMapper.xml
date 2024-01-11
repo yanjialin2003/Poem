@@ -4,13 +4,13 @@
     <select id="isHistoryContained" resultType="String">
         select id
         from user_history
-        where user_id = #{userID} AND post_id = #{postID}
+        where user_name = #{userName} AND post_id = #{postID}
     </select>
 
     <insert id="insertHistory" parameterType="String">
         insert into user_history
         values ( '0',
-                #{userID},
+                #{userName},
                 #{postID}
                )
     </insert>

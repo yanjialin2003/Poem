@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserHistoryMapper {
-    String isHistoryContained(@Param("userID") String userID,@Param("postID")String postID);
+    String isHistoryContained(@Param("userName") String userName,@Param("postID")String postID);
 
-    boolean insertHistory(@Param("userID") String userID,@Param("postID")String postID);
+    boolean insertHistory(@Param("userName") String userName,@Param("postID")String postID);
 }

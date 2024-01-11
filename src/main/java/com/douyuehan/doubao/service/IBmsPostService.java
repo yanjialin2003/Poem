@@ -36,7 +36,7 @@ public interface IBmsPostService extends IService<BmsPost> {
      * @param id
      * @return
      */
-    Map<String, Object> viewTopic(String id, String userID);
+    Map<String, Object> viewTopic(String id, String UserName);
     /**
      * 获取随机推荐10篇
      *

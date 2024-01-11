@@ -59,12 +59,12 @@ public class BmsPostController extends BaseController {
      * 为了添加用户浏览记录发送请求请添加用户 userID
      * 如果没有登录请发送 -1
      * @param id
-     * @param userID
+     * @param userName
      * @return
      */
     @GetMapping()
-    public ApiResult<Map<String, Object>> view(@RequestParam("id") String id, @RequestParam("userID") String userID) {
-        Map<String, Object> map = iBmsPostService.viewTopic(id, userID);
+    public ApiResult<Map<String, Object>> view(@RequestParam("id") String id, @RequestParam("user_name") String userName) {
+        Map<String, Object> map = iBmsPostService.viewTopic(id, userName);
         return ApiResult.success(map);
     }
 
