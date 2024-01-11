@@ -72,7 +72,7 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
                 .title(dto.getTitle())
                 .fileLink(dto.getFile_link())
                 .content(EmojiParser.parseToAliases(dto.getContent()))
-                .createTime(new Date().toString())
+                .createTime(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date()))
                 .build();
         this.baseMapper.insert(topic);
 
