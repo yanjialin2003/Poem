@@ -3,6 +3,7 @@ package com.douyuehan.doubao.common.api;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Optional;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @Data
 @NoArgsConstructor
+@ToString
 public class ApiResult<T> implements Serializable {
 
     private static final long serialVersionUID = -4153430394359594346L;

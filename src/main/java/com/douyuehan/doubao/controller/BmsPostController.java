@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -64,7 +63,7 @@ public class BmsPostController extends BaseController {
      * @return
      */
     @GetMapping()
-    public ApiResult<Map<String, Object>> view(@RequestParam("id") String id, @RequestParam("user_name") String userName) {
+    public ApiResult<Map<String, Object>> view(@RequestParam("id") String id, @RequestParam("username") String userName) {
         Map<String, Object> map = iBmsPostService.viewTopic(id, userName);
         return ApiResult.success(map);
     }

@@ -11,6 +11,10 @@ import com.google.gson.reflect.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -28,9 +32,31 @@ public class PoemController {
 
     //随机获取一首诗
     @RequestMapping("/getOnePoem")
-    public ApiResult<PoemBean> getOnePoem() {
-        PoemBean poemBean = poemService.getOnePoem();
-        return ApiResult.success(poemBean);
+    public String  getOnePoem() {
+//        PoemBean poemBean = poemService.getOnePoem();
+        try {
+            // 设置请求的URL
+            String url = "http://10.68.160.45:5000/Spark/recommendPeom";
+            // 创建URL对象
+            URL obj = new URL(url);
+            // 打开连接
+            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+            // 设置请求方式为GET
+            con.setRequestMethod("GET");
+            // 读取响应内容
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuilder response = new StringBuilder();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+            return response.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Gson().toJson(ApiResult.failed());
     }
 
     //通过诗名和作者找到对应诗，返回JavaBean类型的Json字符串

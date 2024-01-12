@@ -261,6 +261,10 @@ INSERT INTO `ums_user` VALUES ('1349618748226658305', 'zhangsan', 'zhangsan', '$
             zhu text COMMENT '诗词注释'
 );
 
+ ALTER TABLE Poetry
+     ADD COLUMN fig VARCHAR(255) DEFAULT 'https://th.bing.com/th/id/OIP.nGNrlQQru-n7vvPDh7A89gHaFm?rs=1&pid=ImgDetMain';
+
+
  DROP TABLE IF EXISTS `author`;
  CREATE TABLE `author` (
       id varchar(20) auto_increment primary key COMMENT '诗人ID',
@@ -276,8 +280,15 @@ INSERT INTO `ums_user` VALUES ('1349618748226658305', 'zhangsan', 'zhangsan', '$
      hao varchar(10) COMMENT '号'
  );
 
+ DROP TABLE IF EXISTS `poem_video`;
+ CREATE TABLE `poem_video` (
+        id int auto_increment primary key COMMENT '表ID',
+        `poem_id` int COMMENT '诗词id',
+        video_path varchar(255) COMMENT '相关视频链接'
+ );
+ INSERT INTO `poem_video` VALUES (1, '开发者头条', 'https://juejin.cn/', '开发者头条');
+ INSERT INTO `poem_video` VALUES (2, '并发编程网', 'https://juejin.cn/', '并发编程网');
+
 
 SET FOREIGN_KEY_CHECKS = 1;
 
- ALTER TABLE Poetry
-     ADD COLUMN fig VARCHAR(255) DEFAULT 'https://th.bing.com/th/id/OIP.nGNrlQQru-n7vvPDh7A89gHaFm?rs=1&pid=ImgDetMain';
